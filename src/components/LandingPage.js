@@ -1,7 +1,23 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { LucideCheckCircle } from "lucide-react";
+
+// Componentes simples de UI
+const Card = ({ children }) => (
+  <div className="bg-white rounded-lg shadow-md">{children}</div>
+);
+
+const CardContent = ({ children, className = "" }) => (
+  <div className={`p-6 ${className}`}>{children}</div>
+);
+
+const Button = ({ children, className = "", ...props }) => (
+  <button
+    className={`bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow ${className}`}
+    {...props}
+  >
+    {children}
+  </button>
+);
 
 export default function LandingPage() {
   return (
@@ -14,7 +30,7 @@ export default function LandingPage() {
         <p className="text-xl mb-6 text-center max-w-2xl">
           Automatize orçamentos, integre processos e escale seu atendimento em laboratórios, clínicas, consultórios e farmácias de manipulação.
         </p>
-        <Button className="text-lg px-6 py-3">Quero Agendar uma Demonstração</Button>
+        <Button>Quero Agendar uma Demonstração</Button>
         <div className="mt-8">
           <img src="/images/hero-image.png" alt="Ilustração Hero" className="rounded-lg shadow-lg" />
         </div>
@@ -36,7 +52,7 @@ export default function LandingPage() {
         <h2 className="text-4xl font-bold mb-8 text-center">Como Funciona?</h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           <Card>
-            <CardContent className="p-6">
+            <CardContent>
               <h3 className="text-2xl font-semibold mb-4">SalusAPI</h3>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2"><LucideCheckCircle className="text-green-500" /> Integre orçamentos digitais rapidamente.</li>
@@ -45,7 +61,7 @@ export default function LandingPage() {
             </CardContent>
           </Card>
           <Card>
-            <CardContent className="p-6">
+            <CardContent>
               <h3 className="text-2xl font-semibold mb-4">Salus Agent</h3>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2"><LucideCheckCircle className="text-green-500" /> Atendimento automatizado e inteligente via WhatsApp e outros canais.</li>
@@ -76,7 +92,7 @@ export default function LandingPage() {
           Transforme a experiência dos seus clientes com o Projeto Salus.
         </p>
         <div className="flex justify-center">
-          <Button className="text-lg px-6 py-3">Quero uma Demonstração Gratuita</Button>
+          <Button>Quero uma Demonstração Gratuita</Button>
         </div>
       </section>
 

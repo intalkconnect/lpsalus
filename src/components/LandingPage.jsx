@@ -20,7 +20,10 @@ export default function LandingPage() {
       <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-green-900 to-green-700 p-8 text-white">
         <h1 className="text-5xl font-bold mb-4 text-center">Transforme seu atendimento na saúde com o Projeto Salus</h1>
         <p className="text-xl mb-6 text-center max-w-2xl">Automatize orçamentos, integre processos e escale seu atendimento em laboratórios, clínicas, consultórios e farmácias de manipulação.</p>
-        <Button>Quero Agendar uma Demonstração</Button>
+        <div className="flex gap-4">
+          <Button>Quero Agendar uma Demonstração</Button>
+          <Button>▶ Ver Demonstração em Vídeo</Button>
+        </div>
       </section>
 
       <section className="py-20 px-8 bg-green-50">
@@ -46,6 +49,16 @@ export default function LandingPage() {
               <li className="flex items-center gap-2"><LucideCheckCircle className="text-green-500" /> Reduza custos e aumente a disponibilidade 24/7.</li>
             </ul>
           </Card>
+        </div>
+      </section>
+
+      <section className="py-20 px-8 bg-white">
+        <h2 className="text-4xl font-bold mb-4 text-center">Veja na prática o Projeto Salus</h2>
+        <p className="text-xl mb-6 text-center max-w-3xl mx-auto">Assista ao vídeo e entenda como o Projeto Salus pode revolucionar o atendimento em laboratórios, clínicas, consultórios e farmácias.</p>
+        <div className="flex justify-center">
+          <div className="w-full md:w-3/4 aspect-w-16 aspect-h-9">
+            <iframe className="rounded-lg shadow-lg w-full h-[400px]" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Demonstração Projeto Salus" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
         </div>
       </section>
 
